@@ -1,0 +1,11 @@
+
+    <% responseFromAPI.forEach(element => { %>
+        <%- include('./partials/beer.ejs', {element}) %>
+        <p>Food pairing : </p>
+        <ul>
+            <% element.food_pairing.forEach(food => { %>
+                <li><%- food %></li>
+            <% }) %> 
+        </ul>
+        <p>Brewers tips : <%- element.brewers_tips %></p>
+     <% }) %>
